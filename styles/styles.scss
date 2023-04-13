@@ -68,15 +68,6 @@ header{
         }
     }
    
-    @include medium-layout(){
-        justify-content: space-between;
-        display: flex;
-        align-items: center;
-
-       
-
-    }
-    
 
 }
 
@@ -538,4 +529,16 @@ header{
         color: #696969
     }
     
+}
+
+/*media queries*/
+
+header{
+    @include medium-layout(){
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+      
+
+    }
 }
