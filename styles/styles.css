@@ -263,7 +263,6 @@ header .hiden-menu .hiden-menu-right button {
   border-bottom-right-radius: 500px;
 }
 .container-page3 button {
-  display: block;
   border-radius: 4px;
   font-weight: 700;
   line-height: 1.2857;
@@ -271,6 +270,7 @@ header .hiden-menu .hiden-menu-right button {
   padding: 19px 40px 20px;
   width: 100%;
   margin-bottom: 20px;
+  max-width: 400px;
 }
 .container-page3 button:hover {
   cursor: pointer;
@@ -316,19 +316,12 @@ header .hiden-menu .hiden-menu-right button {
   font-weight: 400;
   line-height: 1.4286;
 }
-@media screen and (min-width: 768px) {
-  .container-page3 .lista-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-.container-page3 .customer-depo {
+.container-page3 .content-customer-depo .customer-depo {
   padding: 2rem;
   line-height: 1.4444;
   text-align: left;
 }
-.container-page3 .customer-depo .customer-cote {
+.container-page3 .content-customer-depo .customer-depo .customer-cote {
   font-style: italic;
   font-weight: 200;
   line-height: 1.417;
@@ -337,15 +330,15 @@ header .hiden-menu .hiden-menu-right button {
   text-align: justify;
   font-size: 1.25rem;
 }
-.container-page3 .customer-depo .customer-name {
+.container-page3 .content-customer-depo .customer-depo .customer-name {
   font-weight: 700;
   text-align: left;
 }
-.container-page3 .customer-depo .customer-position {
+.container-page3 .content-customer-depo .customer-depo .customer-position {
   text-align: left;
   margin-bottom: 20px;
 }
-.container-page3 .customer-depo a {
+.container-page3 .content-customer-depo .customer-depo a {
   text-decoration: none;
   color: rgb(18, 100, 163);
 }
@@ -455,9 +448,37 @@ header .hiden-menu .hiden-menu-right button {
 @media screen and (min-width: 768px) {
   .container-page3 .buttons {
     display: flex;
-    max-width: 95%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
     gap: 10px;
     padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-page3 .lista-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .container-page3 .lista-content .number {
+    text-align: left;
+    margin: 0 20px;
+    font-size: 58px;
+  }
+  .container-page3 .lista-content .info {
+    margin: 0 20px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .container-page3 .content-customer-depo {
+    display: flex;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1020px) {
+  .container-page3 .content-customer-depo .customer-depo {
+    padding: 0;
+    max-width: 40%;
   }
 }/*# sourceMappingURL=styles.css.map */

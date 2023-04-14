@@ -337,7 +337,6 @@ header {
   }
 
   button {
-    display: block;
     border-radius: 4px;
     font-weight: 700;
     line-height: 1.2857;
@@ -345,6 +344,7 @@ header {
     padding: 19px 40px 20px;
     width: 100%;
     margin-bottom: 20px;
+    max-width: 400px;
 
     &:hover{
         cursor: pointer;
@@ -399,13 +399,9 @@ header {
       line-height: 1.4286;
     }
 
-    @include medium-layout() {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-    }
   }
 
+.content-customer-depo{
   .customer-depo {
     padding: 2rem;
     line-height: 1.4444;
@@ -435,7 +431,7 @@ header {
       text-decoration: none;
       color: rgb(18, 100, 163);
     }
-  }
+  }}
 
   bottom{
     font-family: Slack-Circular-Pro,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
@@ -450,6 +446,7 @@ header {
     text-align: center;
   }
 }
+
 
 /*media queries*/
 
@@ -568,14 +565,49 @@ section {
     .buttons{
         @include medium-layout(){
             display: flex;
-            max-width: 95%;
-            justify-content: space-between;
+            width:100%;
+            justify-content: center;
             gap: 10px;
             padding: 20px;
-        }
-
-        
+           
+        }  
+                
     }
-}
+
+
+    .lista-content {
+
+      @include medium-layout() {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      
+      .number{
+        text-align: left;
+        margin: 0 20px;
+        font-size: 58px;
+        
+      }
+
+      .info {
+         margin: 0 20px;
+         text-align: left;
+      }
+    }
+  }
+  .content-customer-depo{
+    @include large-layout(){
+      display: flex;
+      margin-bottom: 20px;
+      
+  }
+
+  .customer-depo{
+    @include large-layout(){
+      padding: 0;
+      max-width: 40%;
+    }
+  }
+}}
 
 
