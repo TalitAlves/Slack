@@ -1,4 +1,5 @@
 $primary-color: #541554;
+$secondary-color:  #f4ede4;
 $font_family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif;
 
 $layout_bp_768px: 768px;
@@ -192,13 +193,14 @@ header {
 
 /*PAGE 2*/
 .container-page2 {
-  background-color: #f4ede4;
+  background-color: $secondary-color;
   font-family: $font_family;
 
   .title {
     padding: 3rem 0 0;
     font-size: 14px;
     text-align: center;
+  
 
     p {
       font-weight: 700;
@@ -448,6 +450,71 @@ header {
 }
 
 
+/*PAGE4*/
+.container-page4{
+  font-family: $font_family;
+  background-color: $secondary-color;
+  padding: 48px 0 ;
+
+  h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .carousel-indicators{
+    margin-bottom: -1.5rem !important;
+    
+    button{
+      background-color: $primary-color;
+    }
+  }
+  .carousel{
+   max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+   
+
+      .carousel-inner{
+        background-color: white;
+        padding-bottom: 30px;
+        width: 80%;
+        margin: 0 auto;
+      }
+    img{
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 10px;;
+    }
+  
+        .text-card{
+     padding: 0 15px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between; 
+    }
+    .sub-title{
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .carousel-title{
+      font-size: 24px;
+      margin: 8px 0 16px;
+      font-weight: 700;
+      letter-spacing: normal;
+      line-height: 30px;
+    }
+
+    a{
+      text-decoration: none;
+      color: rgb(18, 100, 163);
+      padding: 20px 0;
+      font-size: 14px;
+    }
+  }
+}
+
 /*media queries*/
 
 header {
@@ -472,6 +539,8 @@ header {
     .column-left {
       @include medium-layout() {
         min-width: 400px;
+        max-width: 600px;
+       
       }
     }
 
@@ -484,13 +553,31 @@ header {
 }
 
 .container-page2{
+  .title {
+    @include large-layout(){
+      display: flex;;
+      flex-direction: column ;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logos{
+      @include large-layout(){
+        gap:45px
+      }
+    }
+  }
+
 section {
 
     @include large-layout(){
         padding-top: 0;
     }
     .left{
-         
+      @include large-layout(){
+        justify-content: center;
+      }   
+
     .text-section {
 
         @include medium-layout() {
@@ -503,6 +590,7 @@ section {
 
         @include large-layout(){
             max-width: 449px;
+            
         }
 
     }    
@@ -562,6 +650,7 @@ section {
 }
 
 .container-page3{
+  
     .buttons{
         @include medium-layout(){
             display: flex;
@@ -611,3 +700,47 @@ section {
 }}
 
 
+
+.container-page4{
+  .carousel-hiden-box{
+    @include medium-layout(){
+      display: none;
+    }
+  }
+
+  .carousel{
+    @include medium-layout(){
+    display: flex;
+    max-width: 80%;
+        
+  }
+
+    @include large-layout(){
+      max-width: 90%;
+    }
+
+    .carousel-inner{
+      @include medium-layout(){
+       display: flex;
+        gap: 20px;
+        background-color: $secondary-color;
+       flex-wrap: wrap;
+       justify-content: center;
+       width: 100%;
+       
+      }
+
+       .carousel-item{
+        @include medium-layout(){
+        display: block;
+        margin: 0;
+        background-color: white;
+        flex-basis: 40%;
+       }
+       @include large-layout(){
+        flex-basis: 22%;
+       }
+  }
+  }
+  }
+  }
