@@ -79,7 +79,9 @@ header {
       button {
         color: $primary-color;
         font-weight: 700;
-        padding: 12px 16px;
+        padding: 0.75rem 1rem;;
+        border-radius: 4px;
+        border:none
       }
     }
   }
@@ -325,6 +327,7 @@ header {
     margin: 0;
   }
 
+  
   .buttons {
     margin: 16px 0 65px;
     text-align: center;
@@ -515,6 +518,66 @@ header {
   }
 }
 
+.container-page5{
+    background: #4a154b;
+    border: none;
+    clip-path: ellipse(75% 100% at center top);
+    height: auto;
+    min-height: 370px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    
+
+  h3{
+    text-align: center;
+
+  }
+  a{
+   
+    color: white;
+    
+  }
+
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    align-items: center;
+    gap: 20px;
+
+    button{
+      width: 85%;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: 700;
+
+      &.open-sorced{
+      color: $primary-color;
+      border: none;
+      
+        a{
+          color:$primary-color
+        }
+      
+
+      }
+
+      &.talita{
+        border: 1px solid white;
+        color:white;
+        background-color: #4a154b;
+      }
+    }
+
+  }
+
+}
+
+
 /*media queries*/
 
 header {
@@ -523,6 +586,7 @@ header {
       justify-content: space-between;
       display: flex;
       align-items: center;
+      width: 85%;
     }
   }
 }
@@ -532,9 +596,9 @@ header {
     @include medium-layout {
       display: flex;
       flex-direction: row;
-      align-items: center;
       justify-content: center;
       margin-bottom: 60px;
+      text-align: left;
     }
     .column-left {
       @include medium-layout() {
@@ -670,24 +734,35 @@ section {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
+        justify-content: center;
+        gap:240px;
+
+        .lista-itens{
+          max-width: 190px;
+        }
       
       .number{
         text-align: left;
         margin: 0 20px;
         font-size: 58px;
+        text-align: center;
         
       }
 
       .info {
          margin: 0 20px;
          text-align: left;
+         text-align: center;
       }
     }
+
+
   }
   .content-customer-depo{
     @include large-layout(){
       display: flex;
       margin-bottom: 20px;
+     
       
   }
 
@@ -744,3 +819,21 @@ section {
   }
   }
   }
+
+  .container-page5{
+    .buttons{
+
+      @include large-layout(){
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+
+      button{
+        width: 25%;
+        padding: 20px;
+        border-radius: 5px;
+        font-weight: 700;
+    }
+  }
+  }}

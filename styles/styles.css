@@ -48,7 +48,9 @@ header .hiden-menu .hiden-menu-right button.equipe-ventas {
 header .hiden-menu .hiden-menu-right button {
   color: #541554;
   font-weight: 700;
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border: none;
 }
 
 .container-page1 {
@@ -412,12 +414,59 @@ header .hiden-menu .hiden-menu-right button {
   font-size: 14px;
 }
 
+.container-page5 {
+  background: #4a154b;
+  border: none;
+  -webkit-clip-path: ellipse(75% 100% at center top);
+          clip-path: ellipse(75% 100% at center top);
+  height: auto;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-evenly;
+  margin-bottom: 30px;
+}
+.container-page5 h3 {
+  text-align: center;
+}
+.container-page5 a {
+  color: white;
+}
+.container-page5 .buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  align-items: center;
+  gap: 20px;
+}
+.container-page5 .buttons button {
+  width: 85%;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.container-page5 .buttons button.open-sorced {
+  color: #541554;
+  border: none;
+}
+.container-page5 .buttons button.open-sorced a {
+  color: #541554;
+}
+.container-page5 .buttons button.talita {
+  border: 1px solid white;
+  color: white;
+  background-color: #4a154b;
+}
+
 /*media queries*/
 @media screen and (min-width: 1020px) {
   header .hiden-menu {
     justify-content: space-between;
     display: flex;
     align-items: center;
+    width: 85%;
   }
 }
 
@@ -425,9 +474,9 @@ header .hiden-menu .hiden-menu-right button {
   .container-page1 .content-column {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
     margin-bottom: 60px;
+    text-align: left;
   }
 }
 @media screen and (min-width: 768px) {
@@ -535,15 +584,22 @@ header .hiden-menu .hiden-menu-right button {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: center;
+    gap: 240px;
+  }
+  .container-page3 .lista-content .lista-itens {
+    max-width: 190px;
   }
   .container-page3 .lista-content .number {
     text-align: left;
     margin: 0 20px;
     font-size: 58px;
+    text-align: center;
   }
   .container-page3 .lista-content .info {
     margin: 0 20px;
     text-align: left;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1020px) {
@@ -596,5 +652,20 @@ header .hiden-menu .hiden-menu-right button {
 @media screen and (min-width: 1020px) {
   .container-page4 .carousel .carousel-inner .carousel-item {
     flex-basis: 22%;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .container-page5 .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .container-page5 .buttons button {
+    width: 25%;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: 700;
   }
 }/*# sourceMappingURL=styles.css.map */
